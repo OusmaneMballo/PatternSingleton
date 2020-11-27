@@ -4,10 +4,13 @@ require './app/Database.php';
 
 echo "Hello! Singleton!...";
 echo "<br/>";
-var_dump(Database::getinstance());
+$cnx1=Database::getinstance();
+var_dump($cnx1);
 echo "<br/>";
-var_dump(Database::getinstance());
+$cnx2=Database::getinstance();
+var_dump($cnx2);
 echo "<br/>";
-var_dump(Database::getinstance());
+$cnx3=Database::getinstance();
+var_dump($cnx3);
 
 ?>
