@@ -1,7 +1,7 @@
 <?php
 
 
-namespace app;
+//namespace app;
 
 
 class Database
@@ -11,6 +11,7 @@ class Database
 
     private function __construct()
     {
+        $this->id=uniqid(); //C'est une fonction qui permet de generer une clee unique!
         $this->settings=require dirname(__DIR__).'/config/Config.php';
     }
 
@@ -18,6 +19,6 @@ class Database
         if(is_null(self::$_instance)){
             return self::$_instance=new Database();
         }
-        return self::$_instance;
+          return self::$_instance;
     }
 }
